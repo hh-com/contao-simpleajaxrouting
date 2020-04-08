@@ -15,7 +15,7 @@ This module provides the basis for your Ajax applications.
 2) Add your code in /src/Controller/SimpleAjaxRouting.php 
 3) Create an ajax call in your html/js File
 
-## Example
+## Example (jQuery needed)
 
 ```html
 <input type="text" name="ajaxQuicksearch" id="ajaxQuicksearch" value="">
