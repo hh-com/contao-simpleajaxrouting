@@ -1,0 +1,12 @@
+simple_ajax_routing.contoller.getarticle:
+    path: /articlesearch/{action}
+    defaults:
+        _controller: Hhcom\ContaoSimpleAjaxRouting\Controller\SimpleAjaxRouting::articleSearchAction
+        _scope: frontend
+        _token_check: false
+simple_ajax_routing.contoller.getpage:
+    path: /pagesearch/{action}
+    defaults:
+        _controller: Hhcom\ContaoSimpleAjaxRouting\Controller\SimpleAjaxRouting::pageSearchAction
+        _scope: frontend
+        _token_check: false

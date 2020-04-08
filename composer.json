@@ -1,0 +1,21 @@
+{
+    "name":"hh-com/contao-simpleajaxrouting",
+    "description":"Contao 4 bundle for simple ajax routing.",
+    "type":"contao-bundle",
+    "license":"LGPL-3.0-or-later",
+    "require":{
+        "php": "^7.1",
+        "contao/core-bundle": "^4.9"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+			"Hhcom\\ContaoSimpleAjaxRouting\\": "src/"
+        }
+    },
+    "extra": {
+		"contao-manager-plugin": "Hhcom\\ContaoSimpleAjaxRouting\\ContaoManager\\Plugin"
+    }
+}
