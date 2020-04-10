@@ -5,11 +5,11 @@ Simple extend with your own code.
 
 ## Install
 
-Copy to:
-root
-\- src 
-\- - hh-com
-\- - - contao-simpleajaxrouting
+Copy to:  
+root  
+\- src  
+\- - hh-com  
+\- - - contao-simpleajaxrouting  
 
 Update your contao installation composer.json
 ``` code
