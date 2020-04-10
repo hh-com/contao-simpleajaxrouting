@@ -23,7 +23,9 @@ class SimpleAjaxRouting extends Controller
             400);
         }
 		*/
-		
+        
+        $keyword = $request->request->get('keyword'); /** if there is a keyword in the js data {} */
+
 		$objArticleModel = \ArticleModel::findByPk((int)$action );		
 
         return new JsonResponse(array(

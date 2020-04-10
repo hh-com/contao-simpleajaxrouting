@@ -10,3 +10,9 @@ simple_ajax_routing.contoller.getpage:
         _controller: Hhcom\ContaoSimpleAjaxRouting\Controller\SimpleAjaxRouting::pageSearchAction
         _scope: frontend
         _token_check: false
+simple_ajax_routing.contoller.invoketest:
+    path: /usersearch/{action}
+    defaults:
+        _controller: Hhcom\ContaoSimpleAjaxRouting\Controller\UserController
+        _scope: frontend
+        _token_check: false

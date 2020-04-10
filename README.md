@@ -5,7 +5,30 @@ Simple extend with your own code.
 
 ## Install
 
-1) Use composer or contao manager to install!
+Copy to:
+root
+\- src 
+\- - hh-com
+\- - - contao-simpleajaxrouting
+
+Update your contao installation composer.json
+``` code
+"repositories": [
+    {
+        "type": "path",
+        "url": "./src/hh-com/contao-simpleajaxrouting",
+        "options": {
+                "symlink": true
+        }
+    }
+],
+"require": {
+    ...
+    "hh-com/contao-simpleajaxrouting": "@dev",
+    ... 
+}
+```
+Run composer: php -d memory_limit=-1 ./path/to/composer.phar update
 
 
 ## Information
@@ -13,7 +36,7 @@ Simple extend with your own code.
 This module provides the basis for your Ajax applications.
 1) Add your new route in /src/Resources/config/routing.yml
 2) Add your code in /src/Controller/SimpleAjaxRouting.php 
-3) Create an ajax call in your html/js File
+3) Create an ajax call in your html/js file
 
 ## Example (jQuery needed)
 
@@ -21,11 +44,15 @@ This module provides the basis for your Ajax applications.
 <input type="text" name="ajaxQuicksearch" id="ajaxQuicksearch" value="">
 
 <script>
-$("#ajaxQuicksearch").on("change", function(event){  
+$("#ajaxQuicksearch").on("keyup", function(event){  
 	$.ajax({  
-		url:        '/articlesearch', // value from your routing.yml
+		url:        '/articlesearch/', // value from your routing.yml
 		type:       'POST',   
-		dataType:   'json',  
+		dataType:   'json',
+		data: {
+                    keyword: $(this).val(),
+                    keyword2: "whotever2"
+        },
 		async:      true,  
 		success: function(data, status) {  
 			console.log(data);
